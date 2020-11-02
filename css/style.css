@@ -152,58 +152,63 @@ img {
 }
 
 .contacts .item {
+  display: inline-flex;
   font-size: 14px;
   line-height: 1.14;
+  align-items: line;
 }
 
 .contacts .item + .item {
   margin-left: 50px;
 }
 
-.mail {
-  display: inline-flex;
+.mail,
+.phone {
+  display: block;
   align-items: center;
   color: var(--main-text-color);
-}
-.mail::before {
-  content: "";
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/mail.png);
-  background-size: contain;
 }
 
 .mail:hover,
 .mail:focus {
   color: var(--hover-text-color);
 }
-.phone {
-  display: inline-flex;
-  align-items: center;
-  color: var(--main-text-color);
-}
-.phone::before {
-  content: "";
-  width: 10px;
-  height: 16px;
+
+.icon-mail,
+.icon-smartphone {
+  fill: var(--main-text-color);
+  padding: 0;
   margin-right: 10px;
-  background-image: url(../images/phone.png);
-  background-size: contain;
+}
+
+.mail:hover .icon-mail,
+.mail:focus .icon-mail {
+  fill: var(--hover-text-color);
 }
 
 .phone:hover,
 .phone:focus {
   color: var(--hover-text-color);
 }
-
+.phone:hover .icon-smartphone,
+.phone:focus .icon-smartphone {
+  fill: var(--hover-text-color);
+}
 /*hero*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--background-color-footer);
-  background-image: /*linear-gradient(center, rgba(47, 48, 58, 0.4) ;)*/ url(../images/hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/hero.jpg);
 
   text-align: center;
 }
@@ -290,12 +295,24 @@ img {
   text-align: left;
   text-transform: uppercase;
 }
-
+/*.work-item-icon {
+  display: flex;
+  background-color: var(--bgc-logo);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+*/
+.icon-group {
+  display: block;
+}
 .small-title::before {
   display: block;
   content: "";
   height: 120px;
-  background-color: #f5f4fa;
+  background-color: var(--bgc-logo);
   border-radius: 4px;
   background-size: 62.32px;
   background-repeat: no-repeat;
@@ -376,6 +393,32 @@ img {
   text-align: center;
 }
 
+.social {
+  display: flex;
+}
+.social-icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  border: 0;
+  background-color: var(--background-header-color);
+}
+/*.social-icon:hover {
+  background-color: var(--hover-text-color);
+}*/
+
+.icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+.icon:hover {
+  fill: var(--background-header-color);
+  background-color: var(--hover-text-color);
+}
 /*footer*/
 
 .contact {
