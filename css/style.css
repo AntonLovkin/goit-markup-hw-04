@@ -370,7 +370,7 @@ img {
   margin-left: 30px;
 }
 .workers-list {
-  max-height: 368px;
+  max-height: 428px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -378,7 +378,7 @@ img {
 }
 .workers-list p {
   margin-top: 10px;
-  margin-bottom: 30px;
+
   text-align: center;
   font-weight: 400;
   line-height: 1.22;
@@ -395,6 +395,11 @@ img {
 
 .social {
   display: flex;
+
+  margin-top: 16px;
+  margin-bottom: 30px;
+  padding-right: 32px;
+  padding-left: 32px;
 }
 .social-icon {
   display: block;
@@ -405,19 +410,25 @@ img {
   border: 0;
   background-color: var(--background-header-color);
 }
-/*.social-icon:hover {
-  background-color: var(--hover-text-color);
-}*/
-
+.social .item + .item {
+  margin-left: 10px;
+}
+.social .social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .icon {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+
   fill: #afb1b8;
 }
-.icon:hover {
-  fill: var(--background-header-color);
+.social-icon:hover {
   background-color: var(--hover-text-color);
+}
+.social-icon:hover .icon {
+  fill: var(--background-header-color);
 }
 /*footer*/
 
