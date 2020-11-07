@@ -151,12 +151,12 @@ img {
   background-color: inherit;
 }
 
-.contacts .item {
+/* .contacts .item {
   display: inline-flex;
   font-size: 14px;
   line-height: 1.14;
   align-items: line;
-}
+} */
 
 .contacts .item + .item {
   margin-left: 50px;
@@ -176,8 +176,9 @@ img {
 
 .icon-mail,
 .icon-smartphone {
+  display: inline-flex;
   fill: var(--main-text-color);
-  padding: 0;
+  padding-left: 0px;
   margin-right: 10px;
 }
 
