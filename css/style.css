@@ -419,7 +419,7 @@ img {
   justify-content: center;
   align-items: center;
 }
-.icon {
+.social-icon-item {
   width: 20px;
   height: 20px;
 
@@ -428,7 +428,7 @@ img {
 .social-icon:hover {
   background-color: var(--hover-text-color);
 }
-.social-icon:hover .icon {
+.social-icon:hover .social-icon-item {
   fill: var(--background-header-color);
 }
 
